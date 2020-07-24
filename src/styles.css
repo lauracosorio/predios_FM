@@ -1,0 +1,17 @@
+jbody {
+  font-family: sans-serif;
+}
+
+.contenedor{
+widows: 50%;
+height: 50%; 
+border: 2px solid pink;
+padding: 20px;
+text-align: center
+}
+
+.section{
+display: flex;
+justify-content: space-between;
+
+}
