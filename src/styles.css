@@ -3,7 +3,7 @@ body {
 }
 
 .contenedor{
-widows: 50%;
+width: 60%;
 height: 50%; 
 border: 2px solid pink;
 padding: 20px;
