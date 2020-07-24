@@ -1,11 +1,23 @@
+//Declarar variables
+
 let metrosCuadrados;
 let tipoInmueble;
 let administracion;
 let genero;
 let edad;
+let aseo;
+let gimnasio;
 
-metrosCuadrados = parseInt(prompt("Ingrese los metros cuadrados del inmueble"));
-tipoInmueble = prompt("Ingrese el tipo de inmueble (Apartamento o Casa)");
+//Solicitar información
+
+// metrosCuadrados = parseInt(prompt("Ingrese los metros cuadrados del inmueble"));
+// tipoInmueble = prompt("Ingrese el tipo de inmueble (apartamento o casa)");
+// genero = prompt(
+//   "Por favor seleccione su genero F si es femenino o M si es masculino");
+// edad = parseInt(prompt("Por favor ingrese su edad"));
+
+
+//Declarar funciones
 
 function valorAdministracion(metros, tipo) {
   if (tipo === "casa") {
@@ -15,14 +27,10 @@ function valorAdministracion(metros, tipo) {
     console.log("El predio es un apartamento");
     return metros * 1500 + 50000;
   } else {
-    //
-   alert("Has ingresado un dato invalido, gracias por su comprension");
+   //alert("Has ingresado un dato invalido, gracias por su comprension");
     return 0;
   }
 }
-
-administracion = valorAdministracion(metrosCuadrados, tipoInmueble);
-console.log("El valor de la administración es de : " + administracion);
 
 function valorAseo(valorAdministracion, metrosCuadrados) {
   let conversion = valorAdministracion * 0.1;
@@ -30,14 +38,6 @@ function valorAseo(valorAdministracion, metrosCuadrados) {
   let suma = conversion + conversionMetros;
   return suma;
 }
-
-let aseo = valorAseo(administracion, metrosCuadrados);
-console.log(aseo);
-
-genero = prompt(
-  "Por favor seleccione su genero F si es femenino o M si es masculino"
-);
-edad = parseInt(prompt("Por favor ingrese su edad"));
 
 function cuotaGimnasio(genero, edad) {
   if (genero === "M") {
@@ -61,12 +61,20 @@ function cuotaGimnasio(genero, edad) {
       return 8000;
     }
   } else {
-    alert("Ingreso un dato incorrecto");
+   // alert("Ingreso un dato incorrecto");
   }
 }
 
-let gimnasio = cuotaGimnasio(genero, edad);
+//Llamar funciones
+
+administracion = valorAdministracion(metrosCuadrados, tipoInmueble);
+console.log("El valor de la administración es de : " + administracion);
+aseo = valorAseo(administracion, metrosCuadrados);
+console.log(aseo);
+gimnasio = cuotaGimnasio(genero, edad);
 console.log(`La cuota del gimnasio es ${gimnasio}`);
+
+//Datos para mostrar en el HTML
 
 document.getElementById("valorAdministracion").innerHTML = administracion;
 document.getElementById("cuotaAseo").innerHTML = aseo;

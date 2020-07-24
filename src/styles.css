@@ -2,16 +2,16 @@ body {
   font-family: sans-serif;
 }
 
-.contenedor{
-width: 60%;
-height: 50%; 
-border: 2px solid pink;
-padding: 20px;
-text-align: center
+.contenedor {
+  width: 50%;
+  height: 50%;
+  border: 2px solid pink;
+  padding: 20px;
+  text-align: center;
+  margin: auto;
 }
 
-.section{
-display: flex;
-justify-content: space-between;
-
+.section {
+  display: flex;
+  justify-content: space-between;
 }
